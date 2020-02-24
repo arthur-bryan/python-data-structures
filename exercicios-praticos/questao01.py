@@ -21,9 +21,6 @@ def calcular_tmb(peso_metabolico, grupo):
     return f"O TMB resultante é: {(peso_metabolico ** 0.75) * k}."
 
 def main():
-    """
-    Recebe o peso do animal, qual grupo ele pertence e imprime a TMB resultante.
-    """
     peso_metabolico = float(input("Informe o peso metabólico do animal: "))
     grupo = input("A qual grupo o animal pertence? ")
     print(calcular_tmb(peso_metabolico, grupo))
