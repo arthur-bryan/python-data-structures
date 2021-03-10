@@ -1,0 +1,34 @@
+from evento import Evento
+from time import sleep
+from random import randint, choice
+
+eventos = ['Colisão', 'Atualização da Tela', 'Particulas',
+           'Lógica do Jogo', 'Inteligência Artificial', 'Simulação Física',
+           'Teclado', 'Mouse', 'Internet']
+
+def gerar_eventos():
+    fila_de_eventos = Queue()
+    for i in range(randint(1, 20)):
+		evento = Evento(choice(eventos))
+		print(f"[+]---------> Evento gerado: {evento}")
+        fila_de_eventos.insert(evento))
+    return fila_de_eventos
+
+def organizar_por_prioridade(fila):
+	fila_organizada = Queue()
+	for item in fila:
+		if item.get_priority == (0, 0):
+			fila_organizada.insert(item)
+	    for item in fila:
+        if item.get_priority == (0, 0):
+            fila_organizada.insert(item)
+    
+
+print(gerar_eventos())
+#duration = 10
+#for _ in range(duration * 2):
+#   for i in range(randint(1, 20):
+#   evento = randchoice(eventos)
+#
+#   sleep(0.5)
+

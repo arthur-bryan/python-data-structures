@@ -1,0 +1,23 @@
+    def remover_todas_ocorrencias(self, elemento):
+        atual = self.head
+        anterior = None
+        if self.head is None:
+            print("A lista está vazia!")
+            return
+        atual = self.head
+        if atual.data == elemento:
+            if atual == self.tail:
+                self.head = self.tail = None
+            else:
+                self.head = self.head.next
+                self.head.prev = None
+            atual = atual.next
+        while atual is not None:
+            if atual.data == elemento:
+                atual.prev.next = atual.next
+                if atual.next is not None:
+                    atual.next.prev = atual.prev
+                else:  
+                    self.tail = atual
+            atual = atual.next
+

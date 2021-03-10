@@ -1,0 +1,48 @@
+from random import randint, choice
+from time import sleep
+
+class Evento:
+
+	grupo_c = ['Colisão', 'Atualização da Tela', 'Particulas']
+	grupo_b = ['Lógica do Jogo', 'Inteligência Artificial', 'Simulação Física']
+	grupo_a = ['Teclado', 'Mouse', 'Internet']
+	grupos = [grupo_c, grupo_b, grupo_a]
+
+	def __init__(self, nome):
+		self.nome = nome
+		self.prioridade_grupo = None	# 0 à 1, quanto menor o número, maior a prioridade
+		self.propriedade_nome = None	# 0 à 1, quanto menor o número, maior a prioridade
+
+	def __str__(self):
+		return str(self.nome)
+
+	def set_priority():
+		if self.nome in grupo_c:
+			self.prioridade_grupo = 0
+			self.prioridade_nome = grupo_c.index(nome)
+		elif self.nome in grupo_b:
+			self.prioridade_grupo = 1
+			self.prioridade_nome = grupo_b.index(nome)
+		elif self.nome in grupo_a:
+			self.prioridade_grupo = 2
+			self.prioridade_nome = grupo_c.index(nome)
+
+	def get_group_priority():
+		return self.prioridade_grupo, self.prioridade_nome
+
+
+eventos = ['Colisão', 'Atualização da Tela', 'Particulas', 'Lógica do Jogo', 'Inteligência Artificial', 'Simulação Física', 'Teclado', 'Mouse', 'Internet']
+
+def gerar_eventos():
+	fila_de_eventos = Queue()
+	for i in range(randint(1, 20)):
+		fila_de_eventos.insert(choice(eventos))
+	return fila_de_eventos
+
+print(gerar_eventos())
+#duration = 10
+#for _ in range(duration * 2):
+#	for i in range(randint(1, 20):
+#	evento = randchoice(eventos)
+#
+#	sleep(0.5)
